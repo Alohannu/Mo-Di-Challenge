@@ -97,6 +97,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-passwordless (0.7.0)
+      devise
     dotenv (2.7.6)
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
@@ -249,6 +251,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
+  devise-passwordless
   dotenv-rails
   font-awesome-sass
   jbuilder (~> 2.7)
