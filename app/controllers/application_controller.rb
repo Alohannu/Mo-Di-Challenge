@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up,
                                       keys: %i[username email])
     devise_parameter_sanitizer.permit(:sign_in,
-                                      keys: %i[login email username])
+                                      keys: %i[login username email])
     devise_parameter_sanitizer.permit(:account_update,
                                       keys: %i[login username email])
   end

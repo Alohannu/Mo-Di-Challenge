@@ -8,8 +8,6 @@ class Devise::Passwordless::SessionsController < Devise::SessionsController
     if self.resource
       resource.send_magic_link(create_params[:remember_me])
       set_flash_message(:notice, :magic_link_sent, now: true)
-      raise
-
     else
       set_flash_message(:alert, :not_found_in_database, now: true)
     end
@@ -31,6 +29,6 @@ class Devise::Passwordless::SessionsController < Devise::SessionsController
   private
 
   def create_params
-    resource_params.permit(:login, :remember_me)
+    resource_params.permit(:login, :email, :token, :remember_me)
   end
 end
