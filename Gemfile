@@ -63,8 +63,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# devise
+# devise, link: https://github.com/heartcombo/devise
 gem 'devise'
 
-# passwordless
-gem 'passwordless'
+# passwordless, link: https://github.com/abevoelker/devise-passwordless
+gem 'devise-passwordless'
