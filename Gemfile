@@ -65,3 +65,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # devise
 gem 'devise'
+
+# passwordless
+gem 'passwordless'
