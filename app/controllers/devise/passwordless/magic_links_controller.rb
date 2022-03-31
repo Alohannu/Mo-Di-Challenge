@@ -28,6 +28,6 @@ class Devise::Passwordless::MagicLinksController < DeviseController
   private
 
   def create_params
-    resource_params.permit(:login, :email, :token, :remember_me)
+    resource_params.permit(:email, :remember_me)
   end
 end
