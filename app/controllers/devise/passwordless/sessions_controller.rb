@@ -5,10 +5,10 @@ class Devise::Passwordless::SessionsController < Devise::SessionsController
     self.resource = resource_class.where(
       ["lower(username) = '#{params['user']['login']}' OR lower(email) = '#{params['user']['login']}'"]
     ).first
-    raise
     if self.resource
       resource.send_magic_link(create_params[:remember_me])
       set_flash_message(:notice, :magic_link_sent, now: true)
+      raise
 
     else
       set_flash_message(:alert, :not_found_in_database, now: true)
@@ -31,6 +31,6 @@ class Devise::Passwordless::SessionsController < Devise::SessionsController
   private
 
   def create_params
-    resource_params.permit(:email, :remember_me)
+    resource_params.permit(:login, :remember_me)
   end
 end
