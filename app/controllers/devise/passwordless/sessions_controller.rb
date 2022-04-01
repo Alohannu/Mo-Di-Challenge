@@ -6,12 +6,12 @@ class Devise::Passwordless::SessionsController < Devise::SessionsController
     if self.resource
       resource.send_magic_link(create_params[:remember_me])
       set_flash_message(:notice, :magic_link_sent, now: true)
+      redirect_to redirect_path and return
     else
       set_flash_message(:alert, :not_found_in_database, now: true)
     end
-
     self.resource = resource_class.new(create_params)
-    redirect_to redirect_path
+    redirect_to root_path
   end
 
   protected

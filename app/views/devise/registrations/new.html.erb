@@ -12,6 +12,14 @@
                         required: true,
                         autofocus: true,
                         input_html: { autocomplete: "email" }%>
+            <%= f.input :username,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "username" }%>
+            <%= f.input :phone,
+                        required: false,
+                        autofocus: true,
+                        input_html: { autocomplete: "phone" }%>
           </div>
 
           <div class="form-actions">
