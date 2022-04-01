@@ -11,7 +11,7 @@ class Devise::Passwordless::SessionsController < Devise::SessionsController
     end
 
     self.resource = resource_class.new(create_params)
-    render :new
+    redirect_to redirect_path
   end
 
   protected
